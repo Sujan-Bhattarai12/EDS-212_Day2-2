@@ -28,3 +28,15 @@ fxyz= expression(2*x*y + 3*(x^2*z^3))
 dfdy= D(fxyz, "y")
 dfdy
 ```
+
+Penguins plot
+
+```{r}
+data= penguins
+ggplot(data, aes(body_mass_g, flipper_length_mm))+
+  geom_point(aes(col=species))+
+  theme_bw()+
+  xlab("Penguins body Mass in grams")+
+  ylab( "Penguins flipper length in millimeters")+
+  coord_flip()
+```
